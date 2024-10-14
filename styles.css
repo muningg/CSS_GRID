@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    background-color: #f0f0f0;
+}
+
+header {
+    background: rgb(172, 23, 122);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    background: rgba(245, 63, 184, 0.925);
+    color: white;
+    text-decoration: none;
+    padding: 5px 15px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.nav-container {
+    display: grid;
+    place-items: center;
+    height: calc(100vh - 100px);
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 15px;
+}
+
+.nav-list li {
+    display: grid;
+    justify-items: center;
+}
+
+.nav-list a {
+    background: #007bff;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.nav-list a:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+.employee-container,
+.student-container,
+.delivery-container,
+.examinee-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.employee-card,
+.student-card,
+.delivery-card,
+.examinee-card {
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: white;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.employee-card:hover,
+.student-card:hover,
+.delivery-card:hover,
+.examinee-card:hover {
+    transform: translateY(-5px);
+}
